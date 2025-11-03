@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         AWS_DEFAULT_REGION = 'us-east-1'
+        
         AWS_ACCOUNT_ID     = '497339096730'
         IMAGE_TAG          = "1.0.${BUILD_NUMBER}"
         SCANNER_HOME       = tool 'sonar-scanner'
@@ -22,7 +23,7 @@ pipeline {
             steps {
                 git branch: 'main',
                     credentialsId: 'github-credentials',
-                    url: 'https://github.com/naveen-nani66/aws-2-tier-project'
+                    url: 'https://github.com/naveen-nani66/Octabyte-assignment.git'
             }
         }
 
